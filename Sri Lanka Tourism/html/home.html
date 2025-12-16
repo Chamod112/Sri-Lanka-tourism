@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sri Lanka Tourism - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="C:\Users\DELL\OneDrive\Desktop\projects\Sri Lanka Tourism\css\home.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Sri Lanka Tourism</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
+          <li class="nav-item"><a class="nav-link" href="plan.html">Plan Your Trip</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Sri Lanka</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero container-fluid">
+    <div class="row w-100">
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <h1>Where would you like to visit?</h1>
+        <div class="input-group mt-4">
+          <input type="text" id="searchBox" class="form-control" placeholder="Enter location (e.g. Kandy)" />
+          <button class="btn btn-warning" id="searchBtn">Search</button>
+        </div>
+      </div>
+      <div class="col-md-6 map-container">
+        <img
+          id="sriLankaMap"
+          src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Sri_Lanka_location_map.svg"
+          alt="Sri Lanka Map"
+          usemap="#srilanka-map"
+        />
+        <map name="srilanka-map">
+          <area
+            shape="poly"
+            coords="65,260,110,220,145,190,160,170,180,160,190,140,220,130,240,140,260,150,280,160,280,185,290,200,310,200,310,230,290,260,260,280,230,280,180,270,150,260"
+            href="destinations.html#colombo"
+            alt="Colombo"
+          />
+          <area
+            shape="poly"
+            coords="190,160,230,130,270,100,310,110,340,130,350,160,340,190,310,210,290,220,270,220"
+            href="destinations.html#kandy"
+            alt="Kandy"
+          />
+          <area
+            shape="poly"
+            coords="70,260,100,280,130,300,150,310,170,320,190,330,210,340,230,350,250,360,280,370,300,380"
+            href="destinations.html#galle"
+            alt="Galle"
+          />
+          <!-- Add more areas as needed -->
+        </map>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const places = ['colombo', 'kandy', 'galle', 'nuwara eliya', 'jaffna'];
+
+    document.getElementById('searchBtn').addEventListener('click', () => {
+      const input = document.getElementById('searchBox').value.toLowerCase().trim();
+
+      if (!input) {
+        alert('Please enter a location.');
+        return;
+      }
+
+      if (places.includes(input)) {
+        alert(`Redirecting to ${input.charAt(0).toUpperCase() + input.slice(1)} destination page.`);
+        window.location.href = `destinations.html#${input}`;
+      } else {
+        alert('Location not found. Please try Colombo, Kandy, Galle, Nuwara Eliya, or Jaffna.');
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

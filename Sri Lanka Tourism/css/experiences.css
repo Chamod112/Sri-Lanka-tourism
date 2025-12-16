@@ -1,0 +1,17 @@
+ body {
+      font-family: 'Open Sans', sans-serif;
+      padding-top: 56px;
+      background-color: #f8f9fa;
+    }
+    .experience-item {
+      margin-bottom: 2rem;
+    }
+    .gallery img {
+      max-width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }

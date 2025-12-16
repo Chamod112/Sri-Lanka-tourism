@@ -1,0 +1,27 @@
+body {
+      font-family: 'Open Sans', sans-serif;
+      padding-top: 56px; /* navbar height */
+      background-color: #f8f9fa;
+    }
+    .hero {
+      min-height: 90vh;
+      background: linear-gradient(to right, #00796b, #004d40);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .map-container img {
+      max-width: 100%;
+      transition: filter 0.3s ease;
+      cursor: pointer;
+    }
+    .highlight {
+      filter: drop-shadow(0 0 15px gold);
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }

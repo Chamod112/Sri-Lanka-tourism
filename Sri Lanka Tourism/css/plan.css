@@ -1,0 +1,19 @@
+body {
+      font-family: 'Open Sans', sans-serif;
+      padding-top: 56px;
+      background-color: #f8f9fa;
+    }
+    #itinerary {
+      margin-top: 20px;
+    }
+    #itinerary ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    #itinerary ul li {
+      background: #00796b;
+      color: white;
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      border-radius: 5px;
+    }
